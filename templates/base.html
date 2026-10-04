@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Flask проект{% endblock %}</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f5f7;
+            color: #1f2933;
+        }
+
+        header {
+            background: #1f4b7a;
+            color: white;
+            padding: 18px 40px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 22px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        main {
+            max-width: 920px;
+            margin: 36px auto;
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        footer {
+            text-align: center;
+            color: #667085;
+            padding: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flask проект</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/about">О проекте</a>
+            <a href="/changelog">Лог изменений</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>Практическая работа №1</footer>
+</body>
+</html>
